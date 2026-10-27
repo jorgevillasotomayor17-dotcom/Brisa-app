@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brisa Studio · Reserva tu turno</title>
+<meta name="description" content="Reserva tu turno en línea en Brisa Studio: barbería y estética. Elige servicio, profesional y horario.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d8a76'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="wrap">
+<nav><div class="glass"><b>✦ <span class="bn"></span></b><div class="l"><a href="#servicios">Servicios</a><a href="#reservar">Reservar</a><a href="#asistente" id="nb">Brisi</a></div></div></nav>
+
+<header class="hero"><div class="hg"><div>
+<div class="glass next"><span class="dot"></span><span id="next">Buscando turno libre…</span></div>
+<h1 id="hT">Tu turno, sin esperas</h1>
+<p id="hS">Reserva en un minuto, elige a tu profesional y confirma por WhatsApp.</p>
+<a class="btn" href="#reservar">Reservar turno</a> <a class="btn g" href="#servicios">Ver servicios</a>
+</div><div class="glass box"><h3>Turnos libres</h3><p class="sub" style="font-size:15px;margin:4px 0 12px">Toca uno para reservarlo.</p><div class="chips" id="hf"></div></div></div></header>
+<section id="como"><div class="steps"><div class="glass"><b>1</b><h3>Elige tu servicio</h3><p>Corte, barba, color, manicure o facial.</p></div><div class="glass"><b>2</b><h3>Escoge día y hora</h3><p>Solo ves los turnos libres, sin llamadas.</p></div><div class="glass"><b>3</b><h3>Confirma por WhatsApp</h3><p>Recibes el resumen listo para enviar.</p></div></div></section>
+
+<section id="servicios"><h2>Servicios</h2><p class="sub">Elige uno y reserva con un toque.</p><div class="grid" id="svGrid"></div></section>
+
+<section id="equipo"><h2>Nuestro equipo</h2><p class="sub">Toca a quien prefieras para reservar con esa persona.</p><div class="team" id="tmw"></div></section>
+<section id="reservar"><h2>Reserva tu turno</h2><p class="sub">Los horarios ocupados aparecen tachados.</p>
+<div class="glass box">
+<label class="lab" for="svSel">Servicio</label><select id="svSel"></select>
+<span class="lab">Profesional</span><div class="chips" id="stC"></div>
+<span class="lab">Día</span><div class="chips" id="dC"></div>
+<span class="lab">Hora</span><div class="chips" id="tC"></div>
+<form id="bf" novalidate>
+<div class="two" style="margin-top:18px"><div><label class="lab" for="bn">Tu nombre</label><input id="bn" autocomplete="name"></div>
+<div><label class="lab" for="bp">Celular</label><input id="bp" type="tel" autocomplete="tel"></div></div>
+<p class="msg" id="bm" role="status"></p><button class="btn">Confirmar reserva</button>
+</form>
+<div class="glass done" id="done" hidden></div>
+<h3 style="margin-top:26px">¿Ya reservaste?</h3><p class="sub" style="font-size:15px;margin:4px 0 10px">Escribe tu celular para ver o cancelar tus turnos.</p><form id="qf" class="row"><input id="qp" type="tel" inputmode="tel" aria-label="Tu celular" placeholder="Tu celular"><button class="btn g">Ver mis turnos</button></form><div id="qr" style="margin-top:12px"></div>
+</div></section>
+
+<section id="asistente"><h2 id="botH">Brisi, tu guía de estilo</h2><p class="sub">Pregunta por servicios, precios u horarios.</p>
+<div class="glass"><div class="log" id="log" aria-live="polite"></div><div class="sug" id="sug"></div>
+<form class="cf" id="cf"><input id="ci" aria-label="Escribe tu pregunta" placeholder="Ej: quiero arreglarme la barba" autocomplete="off"><button class="btn">Enviar</button></form></div></section>
+
+<section id="admin" hidden><h2>Panel del equipo</h2>
+<div class="glass box" id="lb" style="max-width:380px"><form id="lf"><label class="lab" for="lu">Correo del equipo</label><input id="lu" type="email" autocomplete="username"><label class="lab" for="lp">Contraseña</label><input id="lp" type="password" autocomplete="current-password"><p class="msg" id="lm" role="status"></p><button class="btn">Entrar</button></form></div>
+<div id="pn" hidden>
+<div class="st"><div class="glass"><b id="s1">0</b>Turnos hoy</div><div class="glass"><b id="s2">0</b>Próximos</div><div class="glass"><b id="s3">$0</b>Ingresos previstos</div></div>
+<div class="glass box"><h3>Agenda</h3><div class="tbl" id="ag"></div></div>
+<div class="glass box" style="margin-top:14px"><h3>Mi negocio</h3><form id="cf2" class="two" style="margin-top:12px"><div><label class="lab" for="k1">Nombre del negocio</label><input id="k1"></div><div><label class="lab" for="k2">WhatsApp (con indicativo)</label><input id="k2" inputmode="tel"></div><div><label class="lab" for="k3">Titular de la portada</label><input id="k3"></div><div><label class="lab" for="k4">Subtítulo</label><input id="k4"></div><div><label class="lab" for="k5">Abre (hora, 0 a 23)</label><input id="k5" type="number" min="0" max="23"></div><div><label class="lab" for="k6">Cierra (hora, 1 a 24)</label><input id="k6" type="number" min="1" max="24"></div><div style="grid-column:1/-1"><label class="lab" for="k7">Equipo (separado por comas)</label><input id="k7"></div><div><button class="btn">Guardar cambios</button><p class="msg ok" id="km" role="status"></p></div></form></div>
+<div class="glass box" style="margin-top:14px"><h3>Servicios</h3>
+<form id="af" class="row" style="margin:12px 0"><input id="an" placeholder="Nombre" aria-label="Nombre"><input id="ap" type="number" min="0" placeholder="Precio" aria-label="Precio"><input id="am" type="number" min="30" step="30" placeholder="Minutos" aria-label="Minutos"><button class="btn">Agregar</button></form>
+<div class="tbl" id="sl"></div></div>
+<p><button class="btn g" id="lo">Cerrar sesión</button></p></div></section>
+
+<footer><span class="bn"></span> · Horario <span id="hr"></span> · <a id="wa" href="#" target="_blank" rel="noopener">Escríbenos por WhatsApp</a> · <a href="#admin" id="ga">Acceso equipo</a></footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

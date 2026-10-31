@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reservar turno · Brisa Studio</title>
+<meta name="description" content="Reserva tu turno en línea en Brisa Studio: barbería y estética. Elige servicio, profesional y horario.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d8a76'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="wrap">
+<nav><div class="glass"><b>✦ <span class="bn"></span></b><div class="l"><a href="index.html">Inicio</a><a href="servicios.html">Servicios</a><a href="equipo.html">Equipo</a><a href="reservar.html" aria-current="page">Reservar</a><a href="asistente.html" id="nb">Brisi</a></div></div></nav>
+<section id="reservar"><h2>Reserva tu turno</h2><p class="sub">Los horarios ocupados aparecen tachados.</p>
+<div class="glass box">
+<label class="lab" for="svSel">Servicio</label><select id="svSel"></select>
+<span class="lab">Profesional</span><div class="chips" id="stC"></div>
+<span class="lab">Día</span><div class="chips" id="dC"></div>
+<span class="lab">Hora</span><div class="chips" id="tC"></div>
+<form id="bf" novalidate>
+<div class="two" style="margin-top:18px"><div><label class="lab" for="bn">Tu nombre</label><input id="bn" autocomplete="name"></div>
+<div><label class="lab" for="bp">Celular</label><input id="bp" type="tel" autocomplete="tel"></div></div>
+<p class="msg" id="bm" role="status"></p><button class="btn">Confirmar reserva</button>
+</form>
+<div class="glass done" id="done" hidden></div>
+<h3 style="margin-top:26px">¿Ya reservaste?</h3><p class="sub" style="font-size:15px;margin:4px 0 10px">Escribe tu celular para ver o cancelar tus turnos.</p><form id="qf" class="row"><input id="qp" type="tel" inputmode="tel" aria-label="Tu celular" placeholder="Tu celular"><button class="btn g">Ver mis turnos</button></form><div id="qr" style="margin-top:12px"></div>
+</div></section>
+<footer><span class="bn"></span> · Horario <span id="hr"></span> · <a id="wa" href="#" target="_blank" rel="noopener">Escríbenos por WhatsApp</a> · <a href="admin.html" id="ga">Acceso equipo</a></footer>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

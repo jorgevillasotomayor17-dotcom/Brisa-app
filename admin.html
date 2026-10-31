@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Panel del equipo · Brisa Studio</title>
+    <meta name="description"
+        content="Reserva tu turno en línea en Brisa Studio: barbería y estética. Elige servicio, profesional y horario.">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d8a76'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <nav>
+            <div class="glass"><b>✦ <span class="bn"></span></b>
+                <div class="l"><a href="index.html">Inicio</a><a href="servicios.html">Servicios</a><a
+                        href="equipo.html">Equipo</a><a href="reservar.html">Reservar</a><a href="asistente.html"
+                        id="nb">Brisi</a></div>
+            </div>
+        </nav>
+        <section id="admin">
+            <h2>Panel del equipo</h2>
+            <div class="glass box" id="lb" style="max-width:380px">
+                <form id="lf"><label class="lab" for="lp">Clave del equipo</label><input id="lp" type="password"
+                        autocomplete="current-password">
+                    <p class="msg" id="lm" role="status"></p><button class="btn">Entrar</button>
+                </form>
+            </div>
+            <div id="pn" hidden>
+                <div class="st">
+                    <div class="glass"><b id="s1">0</b>Turnos hoy</div>
+                    <div class="glass"><b id="s2">0</b>Próximos</div>
+                    <div class="glass"><b id="s3">$0</b>Ingresos previstos</div>
+                </div>
+                <div class="glass box">
+                    <h3>Agenda</h3>
+                    <div class="tbl" id="ag"></div>
+                </div>
+                <div class="glass box" style="margin-top:14px">
+                    <h3>Mensajes de contacto</h3>
+                    <div class="tbl" id="ms"></div>
+                </div>
+                <div class="glass box" style="margin-top:14px">
+                    <h3>Mi negocio</h3>
+                    <form id="cf2" class="two" style="margin-top:12px">
+                        <div><label class="lab" for="k1">Nombre del negocio</label><input id="k1"></div>
+                        <div><label class="lab" for="k2">WhatsApp (con indicativo)</label><input id="k2"
+                                inputmode="tel"></div>
+                        <div><label class="lab" for="k3">Titular de la portada</label><input id="k3"></div>
+                        <div><label class="lab" for="k4">Subtítulo</label><input id="k4"></div>
+                        <div><label class="lab" for="k5">Abre (hora, 0 a 23)</label><input id="k5" type="number" min="0"
+                                max="23"></div>
+                        <div><label class="lab" for="k6">Cierra (hora, 1 a 24)</label><input id="k6" type="number"
+                                min="1" max="24"></div>
+                        <div style="grid-column:1/-1"><label class="lab" for="k7">Equipo (separado por
+                                comas)</label><input id="k7"></div>
+                        <div><button class="btn">Guardar cambios</button>
+                            <p class="msg ok" id="km" role="status"></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="glass box" style="margin-top:14px">
+                    <h3>Servicios</h3>
+                    <form id="af" class="row" style="margin:12px 0"><input id="an" placeholder="Nombre"
+                            aria-label="Nombre"><input id="ap" type="number" min="0" placeholder="Precio"
+                            aria-label="Precio"><input id="am" type="number" min="30" step="30" placeholder="Minutos"
+                            aria-label="Minutos"><input id="ae" maxlength="8" placeholder="Emoji" aria-label="Emoji"
+                            style="max-width:110px"><input id="ad" maxlength="500"
+                            placeholder="Descripción corta (se ve en la tarjeta)" aria-label="Descripción"
+                            style="flex-basis:100%"><button class="btn" id="ab">Agregar</button><button type="button"
+                            class="btn g" id="ac" hidden>Cancelar edición</button></form>
+                    <div class="tbl" id="sl"></div>
+                </div>
+                <p><button class="btn g" id="lo">Cerrar sesión</button></p>
+            </div>
+        </section>
+        <footer><span class="bn"></span> · Horario <span id="hr"></span> · <a id="wa" href="#" target="_blank"
+                rel="noopener">Escríbenos por WhatsApp</a> · <a href="admin.html" id="ga">Acceso equipo</a></footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

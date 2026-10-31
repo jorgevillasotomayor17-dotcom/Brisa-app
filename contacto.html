@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Contacto · Brisa Studio</title>
+    <meta name="description"
+        content="Reserva tu turno en línea en Brisa Studio: barbería y estética. Elige servicio, profesional y horario.">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d8a76'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <nav>
+            <div class="glass"><b>✦ <span class="bn"></span></b>
+                <div class="l"><a href="index.html">Inicio</a><a href="servicios.html">Servicios</a><a
+                        href="equipo.html">Equipo</a><a href="reservar.html">Reservar</a><a href="asistente.html"
+                        id="nb">Brisi</a></div>
+            </div>
+        </nav>
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p class="sub">Escríbenos y te respondemos pronto.</p>
+            <div class="glass box" style="max-width:600px">
+                <form id="ct" novalidate>
+                    <label class="lab" for="cn">Tu nombre</label><input id="cn" autocomplete="name">
+                    <div class="two">
+                        <div><label class="lab" for="cp">Celular</label><input id="cp" type="tel" autocomplete="tel">
+                        </div>
+                        <div><label class="lab" for="ce">Correo (opcional)</label><input id="ce" type="email"
+                                autocomplete="email"></div>
+                    </div>
+                    <label class="lab" for="cm">Mensaje</label><textarea id="cm" rows="4" maxlength="1000"
+                        style="width:100%;padding:12px 14px;border:1px solid var(--ln);border-radius:14px;background:var(--chip);color:var(--ink);font:16px Outfit,sans-serif;resize:vertical"></textarea>
+                    <input id="cw" tabindex="-1" autocomplete="off" aria-hidden="true"
+                        style="position:absolute;left:-9999px">
+                    <p class="msg" id="cs" role="status"></p><button class="btn">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+        <footer><span class="bn"></span> · Horario <span id="hr"></span> · <a id="wa" href="#" target="_blank"
+                rel="noopener">Escríbenos por WhatsApp</a> · <a href="admin.html" id="ga">Acceso equipo</a></footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

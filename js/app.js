@@ -3,7 +3,7 @@ const CFG = { bot: "Brisi", title: "Tu turno, sin esperas", sub: "Reserva en un 
 /* ===== API propia (Express + MongoDB Atlas) =====
    En tu computador usa el servidor local; ya publicada usa la dirección de Render.
    >>> Cambia la dirección de Render cuando tengas la tuya <<< */
-const API = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? "http://localhost:3000" : "https://brisa-api.onrender.com";
+const API = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? "http://localhost:3000" : "https://brisa-app-adam.onrender.com";
 let adminToken = sessionStorage.getItem("brisa_admin") || "";
 async function api(path, o = {}) {
     const headers = {};

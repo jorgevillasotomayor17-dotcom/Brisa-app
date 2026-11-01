@@ -389,7 +389,7 @@
             href="contacto.html">Contacto</a><a href="admin.html">Acceso equipo</a></footer>
 
     <script>
-        const API = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? "http://localhost:3000" : "https://brisa-api.onrender.com";
+        const API = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? "http://localhost:3000" : "https://brisa-app-adam.onrender.com";
         const $ = i => document.getElementById(i), esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
         const get = p => fetch(API + p).then(r => r.json());
         get("/api/services").then(l => { $("sv").innerHTML = l.slice(0, 6).map(s => `<a class="c" href="reservar.html?s=${s.id}"><div class="e">${esc(s.emoji || "✦")}</div><h3>${esc(s.name)}</h3><p>${esc(s.descr || "")}</p><div class="pr">$${Number(s.price).toLocaleString("es-CO")} · ${s.minutes} min</div></a>`).join("") || "<p>Pronto publicaremos nuestros servicios.</p>" }).catch(() => { $("sv").innerHTML = "<p>No pudimos cargar los servicios. Recarga la página.</p>" });

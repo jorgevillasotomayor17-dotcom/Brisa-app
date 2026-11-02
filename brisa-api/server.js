@@ -398,7 +398,7 @@ app.delete('/api/contact/:id', requireAdmin, wrap(async (req, res) => {
 
 /* ---------- asistente con IA ---------- */
 const AI_KEY = process.env.GEMINI_API_KEY;
-const AI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+const AI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
 
 app.post('/api/chat', rateLimit(20, 10 * 60 * 1000), wrap(async (req, res) => {
   if (!AI_KEY) return res.status(503).json({ error: 'IA no configurada' });

@@ -1,0 +1,9 @@
+$env:ANTHROPIC_BASE_URL = "http://localhost:20128"
+$env:ANTHROPIC_AUTH_TOKEN ="sk-e24c6e3a907648cd-d735bf-7f40d75b"
+$env:ANTHROPIC_MODEL = "auto/coding:free"
+$env:ANTHROPIC_DEFAULT_SONNET_MODEL = "auto/coding:free"
+$env:ANTHROPIC_DEFAULT_OPUS_MODEL = "auto/best-free"
+$env:ANTHROPIC_DEFAULT_HAIKU_MODEL = "auto/coding:free"
+$env:ANTHROPIC_SMALL_FAST_MODEL = "auto/coding:free"
+
+claude --model auto/coding:free

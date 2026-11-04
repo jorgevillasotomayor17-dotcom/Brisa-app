@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brisa Studio · Barbería y estética con turnos en línea</title>
+    <meta name="description"
+        content="Brisa Studio: reserva tu turno en línea, elige a tu profesional y confirma por WhatsApp.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --t: #1d8a76;
+            --d: #0c2b2b;
+            --o: #ff9626;
+            --bg: #f6f4ef;
+            --ink: #12302f
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0
+        }
+
+        body {
+            font-family: Outfit, system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.5
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .w {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 9;
+            background: #f6f4efee;
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #0001
+        }
+
+        nav .w {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            min-height: 64px;
+            flex-wrap: wrap;
+            padding-top: 8px;
+            padding-bottom: 8px
+        }
+
+        nav .l {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            font-weight: 600;
+            font-size: 15px;
+            flex-wrap: wrap
+        }
+
+        .b {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 999px;
+            background: var(--o);
+            color: #1a1200;
+            font-weight: 700
+        }
+
+        .b.g {
+            background: transparent;
+            border: 2px solid currentColor;
+            color: inherit
+        }
+
+        .hero {
+            background: var(--d);
+            color: #fff;
+            padding: 72px 0 84px;
+            border-radius: 0 0 40px 40px
+        }
+
+        .hero .w {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 36px;
+            align-items: center
+        }
+
+        h1 {
+            font-size: clamp(40px, 7vw, 76px);
+            line-height: 1.02;
+            font-weight: 700
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--o)
+        }
+
+        .hero p {
+            font-size: 19px;
+            opacity: .85;
+            margin: 18px 0 26px;
+            max-width: 520px
+        }
+
+        .hero .b+.b {
+            margin-left: 8px
+        }
+
+        .stats {
+            display: grid;
+            gap: 14px
+        }
+
+        .stats div {
+            background: #ffffff14;
+            border: 1px solid #ffffff26;
+            border-radius: 24px;
+            padding: 20px
+        }
+
+        .stats b {
+            font-size: 30px;
+            color: var(--o);
+            display: block
+        }
+
+        section {
+            padding: 70px 0
+        }
+
+        h2 {
+            font-size: clamp(30px, 4.5vw, 46px);
+            margin-bottom: 8px;
+            line-height: 1.1
+        }
+
+        .sub {
+            opacity: .7;
+            margin-bottom: 28px
+        }
+
+        .g3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px
+        }
+
+        .c {
+            background: #fff;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 6px 24px #0001;
+            display: block
+        }
+
+        a.c:hover {
+            transform: translateY(-3px);
+            transition: .2s
+        }
+
+        .c .n {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--t);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            margin-bottom: 12px
+        }
+
+        .c .e {
+            font-size: 30px
+        }
+
+        .c p {
+            opacity: .75
+        }
+
+        .pr {
+            font-weight: 700;
+            color: var(--t);
+            margin-top: 8px
+        }
+
+        .ia {
+            background: var(--d);
+            color: #fff;
+            border-radius: 36px;
+            padding: 44px 28px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            align-items: center
+        }
+
+        .ia .m {
+            background: #ffffff14;
+            border-radius: 18px;
+            padding: 12px 16px;
+            margin-bottom: 10px;
+            max-width: 90%
+        }
+
+        .ia .m.me {
+            background: var(--o);
+            color: #1a1200;
+            margin-left: auto
+        }
+
+        .ia p {
+            opacity: .85;
+            margin: 10px 0 20px
+        }
+
+        .band {
+            background: var(--t);
+            color: #fff;
+            border-radius: 36px;
+            padding: 48px 28px;
+            text-align: center
+        }
+
+        .band p {
+            opacity: .9;
+            margin: 8px 0 22px
+        }
+
+        footer {
+            padding: 30px 0;
+            text-align: center;
+            font-size: 14px;
+            opacity: .75
+        }
+
+        footer a {
+            text-decoration: underline;
+            margin: 0 6px
+        }
+
+        @media(max-width:780px) {
+
+            .hero .w,
+            .ia {
+                grid-template-columns: 1fr
+            }
+
+            .hero {
+                padding: 48px 0 56px
+            }
+
+            section {
+                padding: 48px 0
+            }
+        }
+
+        @media(max-width:640px) {
+            nav {
+                position: static
+            }
+
+            nav .w {
+                padding-top: 10px;
+                padding-bottom: 10px
+            }
+
+            nav .l {
+                gap: 12px;
+                font-size: 14px
+            }
+
+            .b {
+                padding: 10px 18px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="w"><a href="index.html"><b>✦ <span class="bn">Brisa Studio</span></b></a>
+            <div class="l"><a href="servicios.html">Servicios</a><a href="equipo.html">Equipo</a><a
+                    href="asistente.html">Brisi IA</a><a href="contacto.html">Contacto</a><a class="b"
+                    href="reservar.html">Reservar</a></div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="w">
+            <div>
+                <h1>Tu turno,<br><em>sin esperas.</em></h1>
+                <p>Barbería y estética con reserva en línea. Elige tu servicio, tu profesional y tu hora, y confirma por
+                    WhatsApp.</p>
+                <a class="b" href="reservar.html">Reservar turno</a><a class="b g" href="servicios.html">Ver
+                    servicios</a>
+            </div>
+            <div class="stats">
+                <div><b>1 minuto</b>Es lo que toma reservar</div>
+                <div><b>Tu profesional</b>Tú eliges con quién</div>
+                <div><b>Brisi IA</b>Asistente que te recomienda</div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="w">
+            <h2>Así funciona</h2>
+            <p class="sub">Tres pasos, sin llamadas.</p>
+            <div class="g3">
+                <div class="c">
+                    <div class="n">1</div>
+                    <h3>Elige tu servicio</h3>
+                    <p>Corte, barba, color, manicure o facial.</p>
+                </div>
+                <div class="c">
+                    <div class="n">2</div>
+                    <h3>Escoge día y hora</h3>
+                    <p>Solo ves los turnos que están libres.</p>
+                </div>
+                <div class="c">
+                    <div class="n">3</div>
+                    <h3>Confirma por WhatsApp</h3>
+                    <p>Recibes el resumen listo para enviar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding-top:0">
+        <div class="w">
+            <h2>Nuestros servicios</h2>
+            <p class="sub">Toca uno para reservarlo.</p>
+            <div class="g3" id="sv">
+                <p>Cargando…</p>
+            </div>
+            <p style="margin-top:22px"><a class="b g" href="servicios.html" style="color:var(--ink)">Ver todos</a></p>
+        </div>
+    </section>
+
+    <section style="padding-top:0">
+        <div class="w">
+            <h2>Nuestro equipo</h2>
+            <p class="sub">Reserva con la persona que prefieras.</p>
+            <div class="g3" id="eq"></div>
+        </div>
+    </section>
+
+    <section style="padding-top:0">
+        <div class="w">
+            <div class="ia">
+                <div>
+                    <h2>Pregúntale a Brisi</h2>
+                    <p>Nuestra asistente virtual te recomienda servicios y te dice precios y horarios.</p><a class="b"
+                        href="asistente.html">Hablar con Brisi</a>
+                </div>
+                <div>
+                    <div class="m me">Quiero arreglarme la barba</div>
+                    <div class="m">Te recomiendo el arreglo de barba. Si quieres, reserva tu turno desde aquí.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding-top:0">
+        <div class="w">
+            <div class="band">
+                <h2>¿Listo para tu turno?</h2>
+                <p>Reserva en un minuto.</p><a class="b" href="reservar.html">Reservar ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <footer><span class="bn">Brisa Studio</span> · <a href="reservar.html">Reservar</a><a
+            href="contacto.html">Contacto</a><a href="admin.html">Acceso equipo</a></footer>
+
+    <script>
+        const API = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? "http://localhost:3000" : "https://brisa-api.onrender.com";
+        const $ = i => document.getElementById(i), esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+        const get = p => fetch(API + p).then(r => r.json());
+        get("/api/services").then(l => { $("sv").innerHTML = l.slice(0, 6).map(s => `<a class="c" href="reservar.html?s=${s.id}"><div class="e">${esc(s.emoji || "✦")}</div><h3>${esc(s.name)}</h3><p>${esc(s.descr || "")}</p><div class="pr">$${Number(s.price).toLocaleString("es-CO")} · ${s.minutes} min</div></a>`).join("") || "<p>Pronto publicaremos nuestros servicios.</p>" }).catch(() => { $("sv").innerHTML = "<p>No pudimos cargar los servicios. Recarga la página.</p>" });
+        get("/api/settings").then(r => { const d = r.data || {}; if (d.name) document.querySelectorAll(".bn").forEach(e => e.textContent = d.name); $("eq").innerHTML = (d.staff || ["Mateo", "Laura", "Camilo"]).map(n => `<a class="c" href="reservar.html?p=${encodeURIComponent(n)}"><div class="n">${esc(n[0])}</div><h3>${esc(n)}</h3><p>Reservar con ${esc(n)}</p></a>`).join("") }).catch(() => { });
+    </script>
+</body>
+
+</html>
